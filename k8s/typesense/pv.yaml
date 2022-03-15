@@ -1,0 +1,67 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: ts1-pv
+  namespace: typesense
+  labels:
+    type: local
+spec:
+  storageClassName: nfs
+  capacity:
+    storage: 2Gi
+  accessModes:
+    - ReadWriteOnce
+  nfs:
+    server: 192.168.50.113
+    path: "/srv/nfs/kubedata/ts1"
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: ts2-pv
+  namespace: typesense
+  labels:
+    type: local
+spec:
+  storageClassName: nfs
+  capacity:
+    storage: 2Gi
+  accessModes:
+    - ReadWriteOnce
+  nfs:
+    server: 192.168.50.113
+    path: "/srv/nfs/kubedata/ts2"
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: ts3-pv
+  namespace: typesense
+  labels:
+    type: local
+spec:
+  storageClassName: nfs
+  capacity:
+    storage: 2Gi
+  accessModes:
+    - ReadWriteOnce
+  nfs:
+    server: 192.168.50.113
+    path: "/srv/nfs/kubedata/ts3"
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: ts4-pv
+  namespace: typesense
+  labels:
+    type: local
+spec:
+  storageClassName: nfs
+  capacity:
+    storage: 2Gi
+  accessModes:
+    - ReadWriteOnce
+  nfs:
+    server: 192.168.50.113
+    path: "/srv/nfs/kubedata/ts4"
